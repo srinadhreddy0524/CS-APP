@@ -31,8 +31,11 @@ From your phone (Expo), update this line in your app:
 	const response = await fetch('http://YOUR_MAC_IP:8000/recognize', { …
 
 for ip address :	
-	ipconfig    --for windows ,
-	ipconfig getifaddr en0   --for mac .
+
+	ipconfig    	
+ --for windows ,
+	ipconfig getifaddr en0   
+ --for mac .
 
 Step-by-Step Explanation
 1.FastAPI server is running on your pc :
@@ -57,7 +60,8 @@ For apk file :
 Login to your Expo account :
 
 	eas login 
-https://expo.dev/signup
+ 
+	https://expo.dev/signup
 
 Configure your project for EAS Build : 
 
@@ -74,7 +78,7 @@ if your local FastAPI backend be reachable over the internet via HTTPS:
  
 2.Once logged in, go to:
 
-https://dashboard.ngrok.com/get-started/your-authtoken
+	https://dashboard.ngrok.com/get-started/your-authtoken
 
 You’ll see a token like this:
 
@@ -98,7 +102,9 @@ Then in another terminal:
 	ngrok http 8000
  
 To use your ngrok HTTPS forwarding URL:
+
 const response = await fetch('https://<your-ngrok-id>.ngrok.io/recognize', {
+
 Example:
 
 const response = await fetch('https://a1b2c3d4.ngrok.io/recognize', {
@@ -111,7 +117,8 @@ if you want Rebuild the APK
 
 	eas build -p android --profile preview
 Or:
-	eas build -p android
+	
+ 	eas build -p android
 
 
 
